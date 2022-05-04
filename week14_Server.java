@@ -10,15 +10,11 @@ public class week14_Server {
     public static void main (String[] args) throws IOException{
         ServerSocket server = new ServerSocket(8081);
         System.out.println("waiting connection");
-        //int san = (int)(Math.random() * 1000000);
-        //String sanic = san + "";
-        //System.out.println("password is -" +sanic);
-
-
-
-            int cnt = 0;
+       
+        int cnt = 0;
 
         while (true) {
+            
             Socket conn = server.accept();
             System.out.println(cnt + " client Connected");
             cnt++;
@@ -31,21 +27,6 @@ public class week14_Server {
 
             Scanner send = new Scanner(System.in);
 
-            //new Thread(() -> {
-                //try {
-
-
-                    //for (; ; ) {
-
-
-                        //toServer.writeUTF(sanic);
-                        //System.out.println(fromClient.readUTF());
-                        //System.out.println("enter what u wont to send to client");
-
-                    //}
-               // } catch (IOException ignored) {}
-
-            //}).start();
         }
 
     }
